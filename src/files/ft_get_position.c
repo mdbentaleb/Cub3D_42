@@ -20,9 +20,9 @@ void	ft_player_moves(t_data *dt)
 		ft_move_forward(dt);
 	if (mlx_is_key_down(dt->window, MLX_KEY_S))
 		ft_move_back(dt);
-	if (mlx_is_key_down(dt->window, MLX_KEY_A))
-		ft_move_left(dt);
 	if (mlx_is_key_down(dt->window, MLX_KEY_D))
+		ft_move_left(dt);
+	if (mlx_is_key_down(dt->window, MLX_KEY_A))
 		ft_move_right(dt);
 	if (mlx_is_key_down(dt->window, MLX_KEY_SPACE))
 	{
