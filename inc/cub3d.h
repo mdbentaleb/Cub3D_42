@@ -22,7 +22,8 @@
 # include <errno.h>
 # include <fcntl.h>
 
-# include "/Users/moben-ta/Desktop/MLX42/include/MLX42/MLX42.h"
+// # include "/home/med_user/Desktop/MLX42/include/MLX42/MLX42.h"
+#include <MLX42/MLX42.h>
 # include "../src/get_next_line/get_next_line.h"
 # include "../src/Libft/libft.h"
 

@@ -85,7 +85,7 @@ void	mouse_handler(mouse_key_t button, action_t action,
 
 	(void)mods;
 	dt = (t_data *)param;
-	if ((button == MLX_MOUSE_BUTTON_LEFT || button == MLX_KEY_SPACE)
+	if ((button == MLX_MOUSE_BUTTON_LEFT || (int)button == MLX_KEY_SPACE)
 		&& action == MLX_PRESS)
 	{
 		if (!dt->shooting)
@@ -112,6 +112,6 @@ void	cursor_handler(double xpos, double ypos, void *param)
 	dx = xpos - dt->old_mouse_x;
 	sensit = 0.0030;
 	if (dx != 0)
-		ft_rotate(dt, dx * sensit);
+		ft_rotate(dt, -dx * sensit);
 	dt->old_mouse_x = xpos;
 }

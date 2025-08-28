@@ -31,9 +31,9 @@ void	ft_rotate(t_data *dt, double angle)
 void	ft_handle_rotate(t_data *dt)
 {
 	if (mlx_is_key_down(dt->window, MLX_KEY_RIGHT))
-		ft_rotate(dt, dt->rot_speed);
-	else if (mlx_is_key_down(dt->window, MLX_KEY_LEFT))
 		ft_rotate(dt, -dt->rot_speed);
+	else if (mlx_is_key_down(dt->window, MLX_KEY_LEFT))
+		ft_rotate(dt, dt->rot_speed);
 }
 
 void	ft_render(void *param)

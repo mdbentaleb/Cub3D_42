@@ -22,4 +22,6 @@
 
 # Ignore macOS system files
 .DS_Store
+# Vstudio Code settings
+.vscode/
 
