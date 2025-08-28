@@ -69,8 +69,8 @@ void	ft_draw_grids(t_data *dt)
 			{
 				if (dt->map[y][x] == '1')
 				{
-					wall_sq.x = (x - dt->player.x + VIEW_RD) * dt->shape_size;
-					wall_sq.y = (dt->player.y + VIEW_RD - y) * dt->shape_size;
+					wall_sq.x = ((double)x - dt->player.x + VIEW_RD) * dt->shape_size;
+					wall_sq.y = (dt->player.y + VIEW_RD - (double)y) * dt->shape_size;
 					wall_sq.size = dt->shape_size;
 					wall_sq.color = ft_rgb_to_uint32(84, 204, 154);
 					ft_draw_square(dt->s_frame, wall_sq);
