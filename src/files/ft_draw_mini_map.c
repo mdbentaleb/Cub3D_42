@@ -58,11 +58,9 @@ void	ft_draw_grids(t_data *dt)
 	t_square	wall_sq;
 	int			x;
 	int			y;
-	int			screen_x;
-	int			screen_y;
 
-	y = (int)dt->player.y - VIEW_RD;
-	while (y <= (int)dt->player.y + VIEW_RD)
+	y = (int)dt->player.y + VIEW_RD;
+	while (y >= (int)dt->player.y - VIEW_RD)
 	{
 		x = (int)dt->player.x - VIEW_RD;
 		while (x <= (int)dt->player.x + VIEW_RD)
@@ -71,10 +69,8 @@ void	ft_draw_grids(t_data *dt)
 			{
 				if (dt->map[y][x] == '1')
 				{
-					screen_x = ((double)x - dt->player.x + VIEW_RD) * dt->shape_size;
-					screen_y = (VIEW_RD - ((double)y - dt->player.y)) * dt->shape_size;
-					wall_sq.x = screen_x;
-					wall_sq.y = screen_y;
+					wall_sq.x = (x - dt->player.x + VIEW_RD) * dt->shape_size;
+					wall_sq.y = (dt->player.y + VIEW_RD - y) * dt->shape_size;
 					wall_sq.size = dt->shape_size;
 					wall_sq.color = ft_rgb_to_uint32(84, 204, 154);
 					ft_draw_square(dt->s_frame, wall_sq);
@@ -82,7 +78,7 @@ void	ft_draw_grids(t_data *dt)
 			}
 			x++;
 		}
-		y++;
+		y--;
 	}
 }
 
