@@ -26,7 +26,7 @@
 # include "../src/get_next_line/get_next_line.h"
 # include "../src/Libft/libft.h"
 
-# define WIN_WIDTH 1500
+# define WIN_WIDTH 1400
 # define WIN_HEIGHT 1000
 # define VIEW_RD 6
 
