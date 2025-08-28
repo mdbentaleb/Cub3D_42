@@ -19,7 +19,7 @@ int	ft_is_valid_pos(t_data *dt, double x, double y)
 	int		map_x;
 	int		map_y;
 
-	player_radius = 0.08;
+	player_radius = 0.15;
 	check_points[0][0] = x - player_radius;
 	check_points[0][1] = y - player_radius;
 	check_points[1][0] = x - player_radius;
