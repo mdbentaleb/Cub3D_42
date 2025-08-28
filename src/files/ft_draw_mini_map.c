@@ -31,7 +31,6 @@ void	ft_draw_line_direction(mlx_image_t *img, int center,
 	}
 }
 
-// void	ft_draw_square(mlx_image_t *img, int x, int y, int size, uint32_t color)
 void	ft_draw_square(mlx_image_t *img, t_square sq)
 {
 	int	px;
