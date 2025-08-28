@@ -70,7 +70,7 @@ void	ft_draw_grids(t_data *dt)
 				if (dt->map[y][x] == '1')
 				{
 					wall_sq.x = (x - dt->player.x + VIEW_RD) * dt->shape_size;
-					wall_sq.y = (y - dt->player.y + VIEW_RD) * dt->shape_size;
+					wall_sq.y = (VIEW_RD - (y - dt->player.y)) * dt->shape_size;
 					wall_sq.size = dt->shape_size;
 					wall_sq.color = ft_rgb_to_uint32(84, 204, 154);
 					ft_draw_square(dt->s_frame, wall_sq);
@@ -96,7 +96,7 @@ void	ft_draw_player(t_data *dt)
 	player_sq.color = ft_rgb_to_uint32(255, 0, 0);
 	ft_draw_square(dt->s_frame, player_sq);
 	line_x = center + dt->dir_x * dt->shape_size;
-	line_y = center + dt->dir_y * dt->shape_size;
+	line_y = center - dt->dir_y * dt->shape_size;
 	ft_draw_line_direction(dt->s_frame, center, line_x, line_y);
 }
 
