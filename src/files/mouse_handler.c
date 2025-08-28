@@ -110,7 +110,7 @@ void	cursor_handler(double xpos, double ypos, void *param)
 		return ;
 	}
 	dx = xpos - dt->old_mouse_x;
-	sensit = 0.0030;
+	sensit = 0.0150;
 	if (dx != 0)
 		ft_rotate(dt, -dx * sensit);
 	dt->old_mouse_x = xpos;
