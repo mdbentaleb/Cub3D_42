@@ -8,7 +8,7 @@ EA ./assetes/textures/wall_e.png
 
 
 
-F       0,                                    0, 0
+F       0,0, 0
 C 0,200,255
 
 
