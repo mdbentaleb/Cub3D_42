@@ -81,8 +81,13 @@ Before using the project for the first time, you need to run the `setup.sh` scri
 
 If your system requires administrative privileges to install libraries, run the script with sudo:
 
+
 ```bash
-./setup.sh
+	cd Cub3D_42/
+```
+
+```bash
+	./setup.sh
 ```
 
 This will check your system, install any missing libraries, and prepare the environment for CUB3D.
@@ -110,9 +115,7 @@ A window will open displaying the 3D world where you can navigate using the keyb
 ./cub3d maps/map1.cub
 ```
 
-* A window opens with a 3D map
 * You can move within the map
 * Walls and floors are rendered in 3D
 * Wall collision prevents walking through walls
 
----

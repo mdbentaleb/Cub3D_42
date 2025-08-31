@@ -14,13 +14,11 @@
 
 void play_sound(const char *path)
 {
+	(void)path;
 	if (fork() == 0)
 	{
 #if defined(__APPLE__)
 		execlp("afplay", "afplay", path, (char)NULL);
-#elif defined(__linux__)
-		execlp("aplay", "aplay", path, (char )NULL);
-		execlp("paplay", "paplay", path, (char)NULL);
 #endif
 		perror("Sound player not found");
 		_exit(1);
