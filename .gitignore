@@ -1,0 +1,29 @@
+# Prerequisites
+*.d
+
+# Object files
+*.o
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Debug files
+*.dSYM/
+
+# Ignore macOS system files
+.DS_Store
+
+
+# Vstudio Code settings
+.vscode/
+
