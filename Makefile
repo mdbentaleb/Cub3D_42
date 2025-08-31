@@ -6,7 +6,7 @@
 #    By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/02 20:16:36 by moben-ta          #+#    #+#              #
-#    Updated: 2025/08/31 11:27:18 by moben-ta         ###   ########.fr        #
+#    Updated: 2025/08/31 12:36:45 by moben-ta         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,13 +22,13 @@ CFLAGS  = -Wall -Wextra -Werror
 UNAME_S := $(shell uname -s)
 
 ifeq ($(UNAME_S),Darwin)
-	MLX      = /Users/moben-ta/Desktop/MLX42/libmlx42.a
+	MLX      = ./MLX42/libmlx42.a
 	LIBFLAGS = -framework Cocoa -framework OpenGL -framework IOKit \
-			   -I/Users/moben-ta/Desktop/MLX42/include \
-			   -L/Users/moben-ta/Desktop/MLX42/ -lglfw3
+			-I./MLX42/include \
+			-L./MLX42/ -lglfw3
 else ifeq ($(UNAME_S),Linux)
-	CFLAGS  += -I/home/med_user/Desktop/MLX42/include
-	MLX      = -L/home/med_user/Desktop/MLX42 -lmlx42
+	CFLAGS  += -I./MLX42/include
+	MLX      = -L./MLX42 -lmlx42
 	LIBFLAGS = -ldl -lglfw -pthread -lm
 endif
 
@@ -38,32 +38,32 @@ HEADER  = ./inc/cub3d.h
 LIBFT   = $(SRC_DIR)/Libft/libft.a
 
 SRC = $(SRC_DIR)/files/ft_check_map_1.c $(SRC_DIR)/files/ft_check_map_2.c \
-      $(SRC_DIR)/files/ft_draw_3d_1.c $(SRC_DIR)/files/ft_draw_3d_2.c \
-      $(SRC_DIR)/files/ft_draw_mini_map.c $(SRC_DIR)/files/ft_extract_data_1.c \
-      $(SRC_DIR)/files/ft_extract_data_2.c $(SRC_DIR)/files/ft_extract_map.c \
-      $(SRC_DIR)/files/ft_get_position.c $(SRC_DIR)/files/ft_init_data.c \
-      $(SRC_DIR)/files/ft_init_image.c $(SRC_DIR)/files/ft_player_moves.c \
-      $(SRC_DIR)/files/ft_start_game_1.c $(SRC_DIR)/files/ft_start_game.c \
-      $(SRC_DIR)/files/mouse_handler.c $(SRC_DIR)/files/utils.c $(SRC_DIR)/main.c
+		$(SRC_DIR)/files/ft_draw_3d_1.c $(SRC_DIR)/files/ft_draw_3d_2.c \
+		$(SRC_DIR)/files/ft_draw_mini_map.c $(SRC_DIR)/files/ft_extract_data_1.c \
+		$(SRC_DIR)/files/ft_extract_data_2.c $(SRC_DIR)/files/ft_extract_map.c \
+		$(SRC_DIR)/files/ft_get_position.c $(SRC_DIR)/files/ft_init_data.c \
+		$(SRC_DIR)/files/ft_init_image.c $(SRC_DIR)/files/ft_player_moves.c \
+		$(SRC_DIR)/files/ft_start_game_1.c $(SRC_DIR)/files/ft_start_game.c \
+		$(SRC_DIR)/files/mouse_handler.c $(SRC_DIR)/files/utils.c $(SRC_DIR)/main.c
 
 LBFTSRC = $(SRC_DIR)/Libft/ft_isalpha.c $(SRC_DIR)/Libft/ft_isdigit.c \
-          $(SRC_DIR)/Libft/ft_isalnum.c $(SRC_DIR)/Libft/ft_isascii.c \
-          $(SRC_DIR)/Libft/ft_isprint.c $(SRC_DIR)/Libft/ft_strlen.c \
-          $(SRC_DIR)/Libft/ft_toupper.c $(SRC_DIR)/Libft/ft_tolower.c \
-          $(SRC_DIR)/Libft/ft_strchr.c $(SRC_DIR)/Libft/ft_strrchr.c \
-          $(SRC_DIR)/Libft/ft_atoi.c $(SRC_DIR)/Libft/ft_strncmp.c \
-          $(SRC_DIR)/Libft/ft_memset.c $(SRC_DIR)/Libft/ft_bzero.c \
-          $(SRC_DIR)/Libft/ft_memmove.c $(SRC_DIR)/Libft/ft_memcmp.c \
-          $(SRC_DIR)/Libft/ft_strnstr.c $(SRC_DIR)/Libft/ft_memchr.c \
-          $(SRC_DIR)/Libft/ft_memcpy.c $(SRC_DIR)/Libft/ft_substr.c \
-          $(SRC_DIR)/Libft/ft_calloc.c $(SRC_DIR)/Libft/ft_strlcat.c \
-          $(SRC_DIR)/Libft/ft_strjoin.c $(SRC_DIR)/Libft/ft_strtrim.c \
-          $(SRC_DIR)/Libft/ft_strdup.c $(SRC_DIR)/Libft/ft_split.c \
-          $(SRC_DIR)/Libft/ft_putchar_fd.c $(SRC_DIR)/Libft/ft_putstr_fd.c \
-          $(SRC_DIR)/Libft/ft_putendl_fd.c $(SRC_DIR)/Libft/ft_putnbr_fd.c \
-          $(SRC_DIR)/Libft/ft_itoa.c $(SRC_DIR)/Libft/ft_strmapi.c \
-          $(SRC_DIR)/Libft/ft_striteri.c $(SRC_DIR)/Libft/ft_strlcpy.c \
-          $(SRC_DIR)/Libft/ft_strcmp.c
+			$(SRC_DIR)/Libft/ft_isalnum.c $(SRC_DIR)/Libft/ft_isascii.c \
+			$(SRC_DIR)/Libft/ft_isprint.c $(SRC_DIR)/Libft/ft_strlen.c \
+			$(SRC_DIR)/Libft/ft_toupper.c $(SRC_DIR)/Libft/ft_tolower.c \
+			$(SRC_DIR)/Libft/ft_strchr.c $(SRC_DIR)/Libft/ft_strrchr.c \
+			$(SRC_DIR)/Libft/ft_atoi.c $(SRC_DIR)/Libft/ft_strncmp.c \
+			$(SRC_DIR)/Libft/ft_memset.c $(SRC_DIR)/Libft/ft_bzero.c \
+			$(SRC_DIR)/Libft/ft_memmove.c $(SRC_DIR)/Libft/ft_memcmp.c \
+			$(SRC_DIR)/Libft/ft_strnstr.c $(SRC_DIR)/Libft/ft_memchr.c \
+			$(SRC_DIR)/Libft/ft_memcpy.c $(SRC_DIR)/Libft/ft_substr.c \
+			$(SRC_DIR)/Libft/ft_calloc.c $(SRC_DIR)/Libft/ft_strlcat.c \
+			$(SRC_DIR)/Libft/ft_strjoin.c $(SRC_DIR)/Libft/ft_strtrim.c \
+			$(SRC_DIR)/Libft/ft_strdup.c $(SRC_DIR)/Libft/ft_split.c \
+			$(SRC_DIR)/Libft/ft_putchar_fd.c $(SRC_DIR)/Libft/ft_putstr_fd.c \
+			$(SRC_DIR)/Libft/ft_putendl_fd.c $(SRC_DIR)/Libft/ft_putnbr_fd.c \
+			$(SRC_DIR)/Libft/ft_itoa.c $(SRC_DIR)/Libft/ft_strmapi.c \
+			$(SRC_DIR)/Libft/ft_striteri.c $(SRC_DIR)/Libft/ft_strlcpy.c \
+			$(SRC_DIR)/Libft/ft_strcmp.c
 
 GNLSRC = $(SRC_DIR)/get_next_line/get_next_line.c $(SRC_DIR)/get_next_line/get_next_line_utils.c
 
@@ -74,7 +74,7 @@ GNLOBJ  = $(GNLSRC:.c=.o)
 #                                  Rules                                        #
 # ----------------------------------------------------------------------------- #
 
-all: $(LIBFT) $(NAME)
+all: extract_mlx $(LIBFT) $(NAME)
 	@echo "$(GREEN)✅ Done!$(RESET)"
 
 $(NAME): $(OBJ) $(GNLOBJ) $(LIBFT)
@@ -98,11 +98,11 @@ clean:
 
 fclean: clean
 	@echo "$(RED)🔥 Running full cleanup...$(RESET)"
-	rm -rf $(NAME)
+	rm -rf $(NAME) MLX42
 	@$(MAKE) -C $(SRC_DIR)/Libft fclean
 
 re: fclean
 	@echo "$(BLUE)🔁 Rebuilding project...$(RESET)"
 	@$(MAKE) all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re extract_mlx

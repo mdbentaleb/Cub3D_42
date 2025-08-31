@@ -6,7 +6,7 @@
 /*   By: moben-ta <moben-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 18:54:01 by moben-ta          #+#    #+#             */
-/*   Updated: 2025/08/31 12:01:40 by moben-ta         ###   ########.fr       */
+/*   Updated: 2025/08/31 12:42:45 by moben-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 # include <errno.h>
 # include <fcntl.h>
 
-# include "/Users/moben-ta/Desktop/MLX42/include/MLX42/MLX42.h"
+# include "../MLX42/include/MLX42/MLX42.h"
 # include "../src/get_next_line/get_next_line.h"
 # include "../src/Libft/libft.h"
 
