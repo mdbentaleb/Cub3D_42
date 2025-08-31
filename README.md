@@ -83,11 +83,11 @@ If your system requires administrative privileges to install libraries, run the 
 
 
 ```bash
-	cd Cub3D_42/
+cd Cub3D_42/
 ```
 
 ```bash
-	./setup.sh
+./setup.sh
 ```
 
 This will check your system, install any missing libraries, and prepare the environment for CUB3D.
