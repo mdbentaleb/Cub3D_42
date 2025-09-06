@@ -1,6 +1,6 @@
 # 🕹️ CUB3D
 
-
+<img width="1000" height="700" alt="Image" src="https://github.com/user-attachments/assets/6b3ddece-ff4d-4ad6-84a1-3b14d9073117" />
 
 ## 📌 Overview
 
